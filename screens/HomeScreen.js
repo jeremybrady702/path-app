@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
-// import { Baumans } from '../components/StyledText'
+
 
 export default class HomeScreen extends React.Component {
   render() {

@@ -6,8 +6,4 @@ export function MonoText(props) {
     <Text {...props} style={[props.style, { fontFamily: 'space-mono' }]} />
   );
 }
-export function Baumans(props) {
-  return (
-    <Text {...props} style={[props.style, { fontFamily: 'baumans'}]} />
-  )
-}
+
