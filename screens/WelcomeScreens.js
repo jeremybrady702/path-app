@@ -3,9 +3,11 @@ import {
   Image,
   StyleSheet,
     View,
-    Button,
   Dimensions
 } from "react-native";
+import { Container, Content, Button, Text, StyleProvider } from 'native-base';
+import getTheme from '../native-base-theme/components';
+import material from '../native-base-theme/variables/material'
 
 export default class WelcomeScreens extends React.Component {
     static navigationOptions = {
@@ -15,7 +17,9 @@ export default class WelcomeScreens extends React.Component {
         return (
             <View style={styles.WelcomeView}>
                 <Image style={styles.Intro1} source={require('../assets/images/splash2.png')} />
-                <Button style={styles.Button1}title='Next'></Button>
+                <Button large block primary>
+                    <Text>Next</Text>
+                </Button>
             </View>
         )
             
@@ -25,18 +29,22 @@ export default class WelcomeScreens extends React.Component {
 
 const styles = StyleSheet.create({
     WelcomeView: {
-        height: 675
+        flex: 3,
+        minHeight: Dimensions.get('window').height
     },
     Intro1: {
-        flex:1,
+        flex:0,
         marginTop: 24,
         width: 411,
         height: 655,
-        marginBottom: -50,
+        marginBottom: -55,
     },
     Button1: {
-        flex:2,
-        marginBottom: 50,
-        
+        color: 'green',
+        fontSize: 25,
+        padding: 10,
+        width: 300,
+        marginHorizontal: 50,
+        height: 150
     }
 })

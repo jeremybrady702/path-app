@@ -4,6 +4,7 @@ import * as Font from "expo-font";
 import React, { useState } from "react";
 import { Platform, StatusBar, StyleSheet, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { Root } from "native-base";
 
 import AppNavigator from "./navigation/AppNavigator";
 
@@ -36,6 +37,8 @@ async function loadResourcesAsync() {
       // require('./assets/images/robot-prod.png'),
     ]),
     Font.loadAsync({
+      'Roboto': require('native-base/Fonts/Roboto.ttf'),
+    'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
       // This is the font that we are using for our tab bar
       ...Ionicons.font,
       // We include SpaceMono because we use it in HomeScreen.js. Feel free to
