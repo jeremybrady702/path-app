@@ -13,7 +13,8 @@ import SplashScreen from "../screens/Startup";
 const launchStack = createStackNavigator(
   {
     Startup: SplashScreen,
-    Welcome: WelcomeScreens
+    Welcome: WelcomeScreens,
+    // Welcome2: WelcomeScreen2
   },
   {
     initialRouteName: "Startup"
