@@ -6,6 +6,8 @@ import {
 } from "react-navigation";
 
 import WelcomeScreens from "../screens/WelcomeScreens";
+import WelcomeTwo from "../screens/WelcomeTwo";
+import WelcomeThree from "../screens/WelcomeThree";
 
 import MainTabNavigator from "./MainTabNavigator";
 import SplashScreen from "../screens/Startup";
@@ -14,7 +16,8 @@ const launchStack = createStackNavigator(
   {
     Startup: SplashScreen,
     Welcome: WelcomeScreens,
-    // Welcome2: WelcomeScreen2
+    Welcome2: WelcomeTwo,
+    Welcome3: WelcomeThree
   },
   {
     initialRouteName: "Startup"
@@ -22,14 +25,15 @@ const launchStack = createStackNavigator(
 );
 
 export default createAppContainer(
-  createSwitchNavigator({
-    Launching: launchStack,
-    // Main: MainTabNavigator
-  },
+  createSwitchNavigator(
     {
-      
-    initialRouteName:'Launching'
-  })
+      Launching: launchStack
+      // Main: MainTabNavigator
+    },
+    {
+      initialRouteName: "Launching"
+    }
+  )
 );
 
 // You could add another route here for authentication.

@@ -2,16 +2,16 @@ import React from "react";
 import { Image, StyleSheet, View, Dimensions, Text } from "react-native";
 import Button from "react-native-button";
 
-export default class WelcomeTwo extends React.Component {
+export default class WelcomeThree extends React.Component {
   static navigationOptions = {
     header: null
   };
   render() {
     return (
-      <View style={styles.welcomeView2}>
+      <View style={styles.welcomeView3}>
         <Image
-          style={styles.intro2}
-          source={require("../assets/images/welcome2.png")}
+          style={styles.intro3}
+          source={require("../assets/images/welcome3.png")}
         />
         <Button
           style={{
@@ -21,7 +21,7 @@ export default class WelcomeTwo extends React.Component {
             padding: 14,
             fontSize: 20
           }}
-          onPress={() => this.props.navigation.navigate("Welcome3")}
+          onPress={() => this.props.navigation.navigate("Welcome4")}
         >
           NEXT
         </Button>
@@ -31,11 +31,11 @@ export default class WelcomeTwo extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  welcomeView2: {
+  welcomeView3: {
     // flex: 3,
     minHeight: Dimensions.get("window").height
   },
-  intro2: {
+  intro3: {
     flex: 0,
     marginTop: 24,
     width: 411,
