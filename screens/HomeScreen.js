@@ -10,19 +10,15 @@ import {
   View
 } from "react-native";
 
-
 export default class HomeScreen extends React.Component {
   render() {
     return (
       <>
-        <View style={styles.bodyContainer}>
-          
-        </View>
+        <View style={styles.bodyContainer} />
       </>
     );
   }
 }
-
 
 //     <View style={styles.container}>
 //       <ScrollView
@@ -105,7 +101,6 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
   bodyContainer: {
-    maxWidth: 400,
-  },
-
+    maxWidth: 400
+  }
 });

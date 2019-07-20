@@ -8,6 +8,7 @@ import {
 import WelcomeScreens from "../screens/WelcomeScreens";
 import WelcomeTwo from "../screens/WelcomeTwo";
 import WelcomeThree from "../screens/WelcomeThree";
+import WelcomeFour from "../screens/WelcomeFour";
 
 import MainTabNavigator from "./MainTabNavigator";
 import SplashScreen from "../screens/Startup";
@@ -17,7 +18,8 @@ const launchStack = createStackNavigator(
     Startup: SplashScreen,
     Welcome: WelcomeScreens,
     Welcome2: WelcomeTwo,
-    Welcome3: WelcomeThree
+    Welcome3: WelcomeThree,
+    Welcome4: WelcomeFour
   },
   {
     initialRouteName: "Startup"
