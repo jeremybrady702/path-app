@@ -6,6 +6,7 @@ import { Platform, StatusBar, StyleSheet, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Root } from "native-base";
 
+
 import AppNavigator from "./navigation/AppNavigator";
 
 export default function App(props) {
@@ -22,8 +23,8 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        {Platform.OS === "ios" && <StatusBar barStyle="default" />}
-        {Platform.OS === "android" && <StatusBar barStyle="default" />}
+        {Platform.OS === "ios" && <StatusBar barStyle="dark-content" backgroundColor = "rgba(1, 57, 94, .5)" />}
+        {Platform.OS === "android" && <StatusBar backgroundColor = "rgba(1, 57, 94, .9)" barStyle="dark-content" />}
         <AppNavigator />
       </View>
     );

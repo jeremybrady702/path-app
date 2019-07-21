@@ -7,7 +7,8 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
+  Dimensions
 } from "react-native";
 
 export default class HomeScreen extends React.Component {
@@ -101,6 +102,7 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
   bodyContainer: {
-    maxWidth: 400
+    maxHeight: Dimensions.get("window").height,
+    maxWidth: Dimensions.get("window").width
   }
 });

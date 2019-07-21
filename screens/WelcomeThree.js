@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, View, Dimensions, Text } from "react-native";
+import { Image, StyleSheet, View, Dimensions, Text, Platform, StatusBar } from "react-native";
 import Button from "react-native-button";
 
 export default class WelcomeThree extends React.Component {
@@ -33,12 +33,14 @@ export default class WelcomeThree extends React.Component {
 const styles = StyleSheet.create({
   welcomeView3: {
     // flex: 3,
-    minHeight: Dimensions.get("window").height
+    maxHeight: Platform.OS === 'ios' ? Dimensions.get('window').height : Dimensions.get('screen').height - StatusBar.currentHeight,
+    maxWidth: Dimensions.get("window").width
   },
   intro3: {
     flex: 0,
     marginTop: 24,
-    width: 411,
-    height: 600
+    width: "100%",
+    height: 600,
+    marginBottom: Platform.OS === 'ios' ? "-4%" : 0
   }
 });

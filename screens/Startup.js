@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: Dimensions.get("window").width,
     resizeMode: "cover",
-    marginTop: 24
+    marginTop: 24,
+    height: Dimensions.get("window").height
   }
 });

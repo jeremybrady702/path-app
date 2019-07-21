@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, View, Dimensions, Text } from "react-native";
+import { Image, StyleSheet, View, Dimensions, Text, Platform, StatusBar } from "react-native";
 import Button from "react-native-button";
 
 export default class WelcomeScreens extends React.Component {
@@ -10,6 +10,7 @@ export default class WelcomeScreens extends React.Component {
   render() {
     return (
       <View style={styles.welcomeView}>
+        <StatusBar backgroundColor="#01395E" />
         <Image
           style={styles.intro1}
           source={require("../assets/images/splash2.png")}
@@ -32,15 +33,15 @@ export default class WelcomeScreens extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  
   welcomeView: {
-    flex: 3,
-    minHeight: Dimensions.get("window").height
+    maxHeight: Platform.OS === 'ios' ? Dimensions.get('window').height : Dimensions.get('screen').height - StatusBar.currentHeight,
+    maxWidth: Dimensions.get("window").width,
   },
   intro1: {
-    flex: 0,
     marginTop: 24,
-    width: 411,
-    height: 655,
-    marginBottom: -55
+    width: "100%",
+    height: "95%",
+    marginBottom: Platform.OS === 'ios' ? "-13%" : "-12%"
   }
 });
