@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
     marginTop: 24,
     width: "100%",
     height: 600,
-    marginBottom: Platform.OS === 'ios' ? "-4%" : 0
+    marginBottom: Platform.OS === 'ios' ? "-8%" : "-5%"
   }
 });

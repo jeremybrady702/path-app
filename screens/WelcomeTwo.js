@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
   },
   intro2: {
     flex: 0,
-    marginTop: 24,
+    // marginTop: 24,
     width: "100%",
-    height: Platform.OS === 'ios' ? 586 : 600
+    height: Platform.OS === 'ios' ? 587 : 600
   }
 });

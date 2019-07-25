@@ -8,10 +8,7 @@
       "ios",
       "android",
       "web"
-    ],
-    "androidStatusBar" : {
-      "backgroundColor" : "rgba(1, 57, 94, .5)"
-    },
+    ]},
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -30,4 +27,3 @@
       "supportsTablet": true
     }
   }
-}

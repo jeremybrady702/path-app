@@ -1,5 +1,14 @@
 import React from "react";
-import { Image, StyleSheet, View, Dimensions } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  View,
+  Dimensions,
+  Platform,
+  StatusBar,
+  TouchableWithoutFeedback
+} from "react-native";
+
 
 export default class SplashScreen extends React.Component {
   static navigationOptions = {
@@ -13,27 +22,34 @@ export default class SplashScreen extends React.Component {
 
   render() {
     return (
+      <TouchableWithoutFeedback
+      onPress={() => {
+        this.props.navigation.navigate("Welcome");
+      }}
+    >    
       <View style={styles.StartUpView}>
         <Image
           style={styles.splashImg}
           source={require("../assets/images/pathlanding.png")}
         />
-      </View>
+        </View>
+        </TouchableWithoutFeedback>
     );
   }
 }
 
+
 const styles = StyleSheet.create({
   StartUpView: {
-    minWidth: Dimensions.get("window").width,
-    minHeight: Dimensions.get("window").height
+    maxHeight:
+      Platform.OS === "ios"
+        ? Dimensions.get("window").height
+        : Dimensions.get("screen").height - StatusBar.currentHeight,
+    maxWidth: Dimensions.get("window").width
   },
 
   splashImg: {
-    flex: 1,
     width: Dimensions.get("window").width,
-    resizeMode: "cover",
-    marginTop: 24,
     height: Dimensions.get("window").height
   }
 });

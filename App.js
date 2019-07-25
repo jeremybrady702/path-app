@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Platform, StatusBar, StyleSheet, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Root } from "native-base";
+import GeneralStatusBarColor from  './components/styles/GeneralStatusBarColor'
 
 
 import AppNavigator from "./navigation/AppNavigator";
@@ -23,8 +24,10 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        {Platform.OS === "ios" && <StatusBar barStyle="dark-content" backgroundColor = "rgba(1, 57, 94, .5)" />}
-        {Platform.OS === "android" && <StatusBar backgroundColor = "rgba(1, 57, 94, .9)" barStyle="dark-content" />}
+        {Platform.OS === "ios" && <GeneralStatusBarColor backgroundColor= "#01395E"
+      barStyle="light-content"/>}
+        {Platform.OS === "android" && <GeneralStatusBarColor backgroundColor= "#2A8FBA"
+      barStyle="light-content"/>}
         <AppNavigator />
       </View>
     );

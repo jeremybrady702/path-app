@@ -1,5 +1,13 @@
 import React from "react";
-import { Image, StyleSheet, View, Dimensions, Text, StatusBar, Platform } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  View,
+  Dimensions,
+  Text,
+  StatusBar,
+  Platform
+} from "react-native";
 import Button from "react-native-button";
 
 export default class WelcomeFour extends React.Component {
@@ -33,14 +41,17 @@ export default class WelcomeFour extends React.Component {
 const styles = StyleSheet.create({
   welcomeView4: {
     // flex: 3,
-    maxHeight: Platform.OS === 'ios' ? Dimensions.get('window').height : Dimensions.get('screen').height - StatusBar.currentHeight,
+    maxHeight:
+      Platform.OS === "ios"
+        ? Dimensions.get("window").height
+        : Dimensions.get("screen").height - StatusBar.currentHeight,
     maxWidth: Dimensions.get("window").width
   },
   intro4: {
     flex: 0,
-    marginTop: 24,
+    // marginTop: 24,
     width: "100%",
     height: 600,
-    marginBottom: Platform.OS === 'ios' ? "-4%" : 0
+    marginBottom: Platform.OS === "ios" ? "-3%" : 0
   }
 });

@@ -39,9 +39,9 @@ const styles = StyleSheet.create({
     maxWidth: Dimensions.get("window").width,
   },
   intro1: {
-    marginTop: 24,
+    // marginTop: 24,
     width: "100%",
-    height: "95%",
-    marginBottom: Platform.OS === 'ios' ? "-13%" : "-12%"
+    height: "100%",
+    marginBottom: Platform.OS === 'ios' ? "-15%" : "-14%"
   }
 });
